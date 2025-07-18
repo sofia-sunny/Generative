@@ -1,0 +1,45 @@
+{
+  "task": "erlotinib_similarity",
+  "output_dir": "./",
+  "load_from_previous": false,
+  "logging": false,
+  "monitor_app": false,
+  "diversity_filter": {
+    "run": false
+  },
+  "scoring_functions": [
+    {
+      "name": "TanimotoSimilarity",
+      "run": true,
+      "parameters": {
+        "prefix": "erlotinib",
+          "ref_smiles": [
+          "CN[C@H]1CN(C)C[C@H](O1)COc2cccc(c2)C#Cc3ccc(c(c3)OC)Cl"	      
+        ],
+        "radius": 2,
+        "bits": 1024,
+        "features": true,
+        "counts": true,
+        "method": "max",
+        "n_jobs": 1
+      }
+    }
+  ],
+  "scoring": {
+    "method": "single",
+    "metrics": [
+      {
+        "name": "erlotinib_Sim",
+        "weight": 1.0,
+        "modifier": "lin_thresh",
+        "parameters": {
+          "objective": "maximize",
+          "upper": 0.75,
+          "lower": 0.0,
+          "buffer": 0.75
+        }
+      }
+    ]
+  }
+}
+
