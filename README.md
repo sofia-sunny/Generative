@@ -3,4 +3,4 @@ A collection of tutorials and reproducible workflows for applying generative mod
 
 ### Google Colab Notebooks
 
-[Generating Novel EGFR Inhibitors](https://colab.research.google.com/github/sofia-sunny/Generative/blob/main/Generative_SMILES_RNN.ipynb)
+[1- Generating Novel EGFR Inhibitors](https://colab.research.google.com/github/sofia-sunny/Generative/blob/main/Generative_SMILES_RNN.ipynb)
